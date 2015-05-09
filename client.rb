@@ -8,6 +8,10 @@ class Client
     client.droplet_actions.power_on(droplet_id: find_droplet_by_name(name).id)
   end
 
+  def stop_droplet(name)
+    client.droplet_actions.power_off(droplet_id: find_droplet_by_name(name).id)
+  end
+
   private
 
   def find_droplet_by_name(name)
